@@ -1,13 +1,11 @@
-import React, { Fragment } from "react";
-import Grid from "@material-ui/core/Grid";
+import React from "react";
 import PokemonItem from "../PokemonItem/PokemonItem.component";
+import s from './style.module.css';
+import {POKEMONS_DATA as DATA} from "../../data/pokeList";
 
-const PokemonList = ({ data }) => (
-  <Fragment>
-    <div>
-      <Grid container spacing={1}>
-        <Grid container item spacing={3}>
-        {data.map((item, idx) => {
+const PokemonList = () => (
+    <div className={s.cards}>
+        {DATA.map((item, idx) => {
           const {
             id,
             name,
@@ -16,21 +14,18 @@ const PokemonList = ({ data }) => (
             types
           } = item;
           return (
-            <PokemonItem
-              key={idx}
-              id={id}
-              name={name}
-              img={img}
-              imgShiny={imgShiny}
-              types={types}
-              
-            />
+              <PokemonItem
+                key={idx}
+                id={id}
+                name={name}
+                img={img}
+                imgShiny={imgShiny}
+                types={types}
+                
+              />
           );
         })}
-        </Grid>
-      </Grid>
     </div>
-  </Fragment>
 );
 
 export default PokemonList;

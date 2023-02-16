@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapperHeader {
+  display: flex;
+  background-color: #9bcc50;
+  color: #444;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 10px;
+  justify-content: center;
+}
+
+.wrapperSubtitle {
+  display: flex;
+  background-color: #444;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px;
+  justify-content: center;
+  margin: 10px;
+}
+/* 
+.cards {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+} */
+
+  
